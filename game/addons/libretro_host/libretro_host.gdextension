@@ -1,0 +1,14 @@
+[configuration]
+
+entry_symbol = "libretro_host_init"
+compatibility_minimum = "4.3"
+reloadable = false
+
+[libraries]
+
+windows.debug.x86_64 = "res://addons/libretro_host/bin/liblibretro_host.windows.template_debug.x86_64.dll"
+windows.release.x86_64 = "res://addons/libretro_host/bin/liblibretro_host.windows.template_release.x86_64.dll"
+linux.debug.x86_64 = "res://addons/libretro_host/bin/liblibretro_host.linux.template_debug.x86_64.so"
+linux.release.x86_64 = "res://addons/libretro_host/bin/liblibretro_host.linux.template_release.x86_64.so"
+macos.debug = "res://addons/libretro_host/bin/liblibretro_host.macos.template_debug.universal.dylib"
+macos.release = "res://addons/libretro_host/bin/liblibretro_host.macos.template_release.universal.dylib"

@@ -1,0 +1,89 @@
+[gd_scene load_steps=4 format=3]
+
+[ext_resource type="Script" path="res://main.gd" id="1_main"]
+[ext_resource type="Shader" path="res://shaders/retro_screen.gdshader" id="2_shader"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_screen"]
+shader = ExtResource("2_shader")
+shader_parameter/scanline_strength = 0.0
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+mouse_filter = 2
+script = ExtResource("1_main")
+
+[node name="Screen" type="TextureRect" parent="."]
+texture_filter = 2
+material = SubResource("ShaderMaterial_screen")
+layout_mode = 0
+offset_right = 1920.0
+offset_bottom = 1080.0
+mouse_filter = 2
+expand_mode = 1
+
+[node name="Menu" type="ColorRect" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0.8)
+
+[node name="Center" type="CenterContainer" parent="Menu"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Items" type="VBoxContainer" parent="Menu/Center"]
+layout_mode = 2
+theme_override_constants/separation = 24
+
+[node name="Title" type="Label" parent="Menu/Center/Items"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 56
+text = "Ghouls 'n Ghosts HD"
+horizontal_alignment = 1
+
+[node name="Continue" type="Button" parent="Menu/Center/Items"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "Continuar"
+
+[node name="American" type="Button" parent="Menu/Center/Items"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "Versão americana (Ghouls'n Ghosts)"
+
+[node name="Japanese" type="Button" parent="Menu/Center/Items"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 36
+text = "Versão japonesa (Daimakaimura)"
+
+[node name="Hint" type="Label" parent="Menu/Center/Items"]
+layout_mode = 2
+theme_override_font_sizes/font_size = 24
+text = "Trocar de versão reinicia o jogo. Esc abre este menu."
+horizontal_alignment = 1
+
+[node name="Osd" type="Label" parent="."]
+layout_mode = 0
+offset_left = 32.0
+offset_top = 24.0
+offset_right = 1888.0
+offset_bottom = 80.0
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 8
+theme_override_font_sizes/font_size = 28
+autowrap_mode = 3
+
+[node name="Audio" type="AudioStreamPlayer" parent="."]

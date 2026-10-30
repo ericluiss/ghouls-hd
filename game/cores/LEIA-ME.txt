@@ -1,0 +1,7 @@
+Coloque aqui o core libretro do Genesis Plus GX Wide:
+  Windows: genesis_plus_gx_wide_libretro.dll
+  Linux:   genesis_plus_gx_wide_libretro.so
+  macOS:   genesis_plus_gx_wide_libretro.dylib
+O core comum (genesis_plus_gx_libretro) também funciona, mas sem preencher a tela.
+Os scripts scripts/setup.sh e scripts/setup.ps1 baixam automaticamente.
+Num jogo exportado, a pasta "cores" deve ficar ao lado do executável.

@@ -1,0 +1,3 @@
+Coloque aqui a ROM do Ghouls 'n Ghosts (Mega Drive / Genesis).
+Extensões aceitas: .md .bin .gen .smd (o .zip também serve, se tiver uma delas dentro).
+Este arquivo é o único desta pasta que vai para o git.
