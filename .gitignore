@@ -1,0 +1,20 @@
+# ROMs nunca vão para o repositório
+game/roms/*
+!game/roms/LEIA-ME.txt
+*.bin
+*.gen
+*.smd
+
+# Dependências e binários gerados
+deps/
+game/addons/libretro_host/bin/
+game/cores/*
+!game/cores/LEIA-ME.txt
+*.os
+*.obj
+*.o
+.sconsign.dblite
+
+# Godot
+game/.godot/
+export/
